@@ -69,7 +69,7 @@ jobs:
         include-compose: true
     - name: Stop compose
       if: ${{ always() }}
-      run: docker-compose down --remove-orphans
+      run: docker compose down --remove-orphans
     - name: Upload test environment logs
       if: ${{ always() }}
       uses: actions/upload-artifact@v2
@@ -136,7 +136,7 @@ jobs:
         include-compose: true
     - name: Stop compose
       if: ${{ always() }}
-      run: docker-compose down --remove-orphans
+      run: docker compose down --remove-orphans
     - name: Upload test environment logs
       if: ${{ always() }}
       uses: actions/upload-artifact@v2
